@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 28% 7%;
+    --foreground: 210 20% 96%;
+    --card: 217 33% 10%;
+    --card-foreground: 210 20% 96%;
+    --popover: 217 33% 9%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 14%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 217 28% 13%;
+    --muted-foreground: 215 16% 58%;
+    --accent: 0 91% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 22% 18%;
+    --input: 217 28% 16%;
+    --ring: 258 90% 66%;
+    --apple: 0 91% 55%;
+    --amber: 38 92% 50%;
+    --radius: 0.9rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html,
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  body {
+    background-image:
+      radial-gradient(40rem 40rem at 85% -5%, hsl(258 90% 66% / 0.10), transparent 60%),
+      radial-gradient(35rem 35rem at -5% 10%, hsl(0 91% 55% / 0.06), transparent 60%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .text-apple {
+    color: hsl(var(--apple));
+  }
+  .bg-apple {
+    background-color: hsl(var(--apple));
+  }
+  .text-amber-glow {
+    color: hsl(var(--amber));
+  }
+  .glow-primary {
+    box-shadow: 0 0 24px -6px hsl(258 90% 66% / 0.55);
+  }
+  .glow-apple {
+    box-shadow: 0 0 20px -6px hsl(0 91% 55% / 0.55);
+  }
+}
+
+@keyframes vinyl-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+.animate-vinyl-spin {
+  animation: vinyl-spin 6s linear infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.2s ease-in-out infinite;
+}

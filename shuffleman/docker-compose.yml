@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  shuffleman:
+    build: .
+    container_name: shuffleman_app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_SUPABASE_URL=https://gyfjuveiwljimfamdllh.supabase.co
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_4DgNabgcgDfPqr-b67KxEA_E-1hTsED

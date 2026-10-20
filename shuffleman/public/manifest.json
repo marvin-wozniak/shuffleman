@@ -1,0 +1,17 @@
+{
+  "name": "ShuffleMan",
+  "short_name": "ShuffleMan",
+  "description": "Gestionnaire et tirage d'albums de musique",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0D14",
+  "theme_color": "#0A0D14",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=512&auto=format&fit=crop&q=80",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
